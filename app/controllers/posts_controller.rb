@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 
     def update
       @post =  Post.find(params[:id])
-      if @post.updata(post_params)
+      if @post.update(post_params)
         redirect_to account_posts_path, notice: 'Update Success'
       else
         render :edit
